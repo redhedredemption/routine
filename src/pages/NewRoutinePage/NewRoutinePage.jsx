@@ -1,5 +1,5 @@
 export default function NewRoutinePage() {
     return (
-      <h1>NewRoutinePage</h1>
+      <h1>New Routine</h1>
     );
   }

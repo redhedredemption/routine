@@ -1,11 +1,11 @@
 /* CSS Custom Properties */
 :root {
   --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
+  --green-1: #FBF9F6;
+  --green-2: #ACB886;
+  --green-3: #316942;
+  --green-4: #163823;
+  --gold: #eecb2e;
   --text-light: #968c84;
   --text-dark: #615954;
 }
@@ -14,6 +14,42 @@
   box-sizing: border-box;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--green-3);
+  height: 70px;
+  padding: 0 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--white);
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 15px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--gold);
+  color: var(--green-4);
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  color: var(--white);
+  font-weight: bold;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,7 +57,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background-color: var(--green-4);
   padding: 2vmin;
   height: 100vh;
 }
@@ -30,6 +66,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*
+Fraunces: CSS class for a variable style
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.fraunces-<uniquifier> {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+
+
+
+
+
+Special Elite: CSS class
+
+.special-elite-regular {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+}
+
+
+*/
 
 #root {
   height: 100%;
@@ -69,9 +136,9 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--tan-1);
+  background-color: var(--green-1);
   color: var(--text-dark);
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid var(--green-3);
   border-radius: 1vmin;
   padding: .6vmin;
   text-align: center;
@@ -80,13 +147,13 @@ code {
 
 .form-container {
   padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: var(--green-1);
+  border: .1vmin solid var(--green-3);
   border-radius: 1vmin;
 }
 
 p.error-message {
-  color: var(--orange);
+  color: var(--gold);
   text-align: center;
 }
 
@@ -106,7 +173,7 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid var(--green-3);
   border-radius: .5vmin;
   color: var(--text-dark);
   background-image: none !important; /* prevent lastpass */
@@ -114,19 +181,19 @@ input {
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: var(--gold);
 }
 
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
-  color: var(--white);
-  background-color: var(--orange);
+  color: var(--green-4);
+  background-color: var(--gold);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
+  border: .1vmin solid var(--green-2);
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
@@ -144,7 +211,7 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: lightgray;
 }
 
 button[type="submit"] {
