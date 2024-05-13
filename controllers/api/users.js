@@ -5,7 +5,6 @@ const User = require('../../models/user');
 module.exports = {
   create,
   login,
-  checkToken
 };
 
 async function create(req, res) {
@@ -32,10 +31,7 @@ async function login(req, res) {
   }
 }
 
-function checkToken(req, res) {
-  console.log('req.user', req.user);
-  res.json(req.exp);
-}
+
 
 /*--- Helper Functions --*/
 
