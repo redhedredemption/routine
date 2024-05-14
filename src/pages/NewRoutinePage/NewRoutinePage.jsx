@@ -20,14 +20,24 @@ export default function NewRoutinePage() {
   // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // send a POST request to backend API to add the routine
-    console.log('Submitting', form);
-
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/routines', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(form)
+      });
+      if (!response.ok) {
+        throw new Error('Something went wrong with the request.');
+      }
+      const data = await response.json(); // Assuming the server sends back the added routine
       alert('Routine added successfully!');
-      navigate('/routines'); // Redirect to routines page after submission
-    }, 500);
+      navigate('/routines'); // Redirect to routines page after successful submission
+    } catch (error) {
+      alert('Failed to create the routine. Please try again.');
+      console.error('Failed to submit form:', error);
+    }
   };
 
   return (
