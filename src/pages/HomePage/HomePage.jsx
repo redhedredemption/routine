@@ -1,6 +1,4 @@
-import React from 'react';
-
-function HomePage({ user }) {
+export default function HomePage({ user }) {
   return (
     <div>
       <h1>Welcome to the Occupational Therapy Helper App</h1>
@@ -13,4 +11,3 @@ function HomePage({ user }) {
   );
 }
 
-export default HomePage;
