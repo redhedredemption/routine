@@ -8,7 +8,7 @@ const mockExercises = [
   { id: 3, name: 'Sit to Stand', description: 'Practice sitting down and standing up to enhance leg strength.' }
 ];
 
-function ExercisesPage() {
+export default function ExercisesPage() {
   const [exercises, setExercises] = useState([]);
 
   useEffect(() => {
@@ -39,5 +39,3 @@ function ExercisesPage() {
     </div>
   );
 }
-
-export default ExercisesPage;

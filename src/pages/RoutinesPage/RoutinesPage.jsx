@@ -8,7 +8,7 @@ const mockRoutines = [
   { id: 3, title: 'Evening Relaxation', description: 'Relax your muscles and mind before sleep.' }
 ];
 
-function RoutinesPage() {
+export default function RoutinesPage() {
   const [routines, setRoutines] = useState([]);
 
   useEffect(() => {
@@ -39,5 +39,3 @@ function RoutinesPage() {
     </div>
   );
 }
-
-export default RoutinesPage;
