@@ -8,8 +8,13 @@ export default function RoutinesPage() {
 
   useEffect(() => {
     async function getRoutines() {
-      const fetchedRoutines = await routinesAPI.getAllRoutines();
-      setRoutines(fetchedRoutines);
+      try {
+        const fetchedRoutines = await routinesAPI.getAllRoutines();
+        console.log("Fetched routines:", fetchedRoutines); 
+        setRoutines(fetchedRoutines);
+      } catch (error) {
+        console.error("Error fetching routines:", error);
+      }
     }
     getRoutines();
   }, []);
