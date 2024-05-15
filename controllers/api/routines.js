@@ -36,6 +36,7 @@ async function getRoutineDetails(req, res) {
 
 // Create a new routine
 async function createRoutine(req, res) {
+    req.body.user = req.user._id;
   try {
     const routine = new Routine(req.body);
     await routine.save();

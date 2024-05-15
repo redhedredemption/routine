@@ -1,3 +1,4 @@
+import * as routinesAPI from '../../utilities/routines-api';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,25 +21,9 @@ export default function NewRoutinePage() {
   // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
-    try {
-      const response = await fetch('/api/routines', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(form)
-      });
-      if (!response.ok) {
-        throw new Error('Something went wrong with the request.');
-      }
-      const data = await response.json(); // Assuming the server sends back the added routine
-      alert('Routine added successfully!');
-      navigate('/routines'); // Redirect to routines page after successful submission
-    } catch (error) {
-      alert('Failed to create the routine. Please try again.');
-      console.error('Failed to submit form:', error);
-    }
-  };
+      const response = await routinesAPI.addRoutine(form)
+      navigate('/routines')
+  }
 
   return (
     <div>
