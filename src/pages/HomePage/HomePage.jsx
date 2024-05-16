@@ -12,6 +12,8 @@ export default function HomePage({ user }) {
           <h3>Sign in to begin managing your Occupational Therapy exercises, medications, and day-to-day routines.</h3>
         </>
       )}
+      <img src="/images/mm.jpg" alt="mickey"/>
     </div>
+    
   );
 }
