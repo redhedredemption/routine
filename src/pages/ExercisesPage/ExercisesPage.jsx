@@ -34,7 +34,7 @@ export default function ExercisesPage() {
               <h3>{exercise.title}</h3>
               <p>{exercise.description}</p>
               <button onClick={() => handleDelete(exercise._id)}>Delete</button>
-              <Link to={`/exercises/edit/${exercise._id}`}>Edit</Link>
+              <Link to={`/exercises/edit/${exercise._id}`} className="button">Edit</Link>
             </li>
           ))}
         </ul>

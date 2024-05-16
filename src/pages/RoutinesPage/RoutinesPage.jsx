@@ -34,7 +34,7 @@ export default function RoutinesPage() {
               <h3>{routine.title}</h3>
               <p>{routine.description}</p>
               <button onClick={() => handleDelete(routine._id)}>Delete</button>
-              <Link to={`/routines/edit/${routine._id}`}>Edit</Link>
+              <Link to={`/routines/edit/${routine._id}`} className="button">Edit</Link>
             </li>
           ))}
         </ul>

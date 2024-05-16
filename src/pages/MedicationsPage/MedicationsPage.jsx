@@ -34,7 +34,7 @@ export default function MedicationsPage() {
               <h3>{medication.title}</h3>
               <p>{medication.description}</p>
               <button onClick={() => handleDelete(medication._id)}>Delete</button>
-              <Link to={`/medications/edit/${medication._id}`}>Edit</Link>
+              <Link to={`/medications/edit/${medication._id}`} className="button">Edit</Link>
             </li>
           ))}
         </ul>
