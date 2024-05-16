@@ -57,21 +57,25 @@ export default function RoutinesPage() {
   return (
     <>
       <h1>Routines</h1>
+      <div className="add-button-container">
       <Link to="/routines/new" className="button">Add New Routine</Link>
-      {routines.length ? (
-        <ul className="routines-container">
-          {routines.map(routine => (
-            <li key={routine._id}>
+      </div>
+      <div className="routines-container">
+        {routines.length ? (
+          routines.map(routine => (
+            <div key={routine._id} className="routine-card">
               <h3>{routine.title}</h3>
               <p>{routine.description}</p>
-              <button onClick={() => handleDelete(routine._id)}>Delete</button>
-              <button onClick={() => openEditModal(routine)}>Edit</button>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>There are no routines available at the moment!</p>
-      )}
+              <div className="button-group">
+                <button onClick={() => handleDelete(routine._id)}>Delete</button>
+                <button onClick={() => openEditModal(routine)}>Edit</button>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p>There are no routines available at the moment!</p>
+        )}
+      </div>
       <Modal isOpen={isEditing} onClose={closeEditModal}>
         <form onSubmit={handleSubmitEdit}>
           <label htmlFor="title">Title</label>

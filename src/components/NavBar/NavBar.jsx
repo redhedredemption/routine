@@ -37,9 +37,9 @@ export default function NavBar({ user, setUser }) {
       ) : (
         <>
           {/* Links available when no user is logged in */}
-          <Link to="/auth">Login</Link>
+          <Link to="/">Home</Link>
           &nbsp;&nbsp;
-          <Link to="/auth/signup">Sign Up</Link>
+          <Link to="/auth">Sign In</Link>
         </>
       )}
     </nav>

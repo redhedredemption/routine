@@ -1,13 +1,17 @@
 export default function HomePage({ user }) {
   return (
     <div>
-      <h1>Welcome to the Occupational Therapy Helper App</h1>
+      <h1>Welcome to rOuTine!</h1>
+      <h2>Your one-stop Occupational Therapy helper</h2>
       {user ? (
-        <p>Hello, {user.name}! Manage your therapy exercises and medications effectively.</p>
+        <>
+          <h3>Use the tools above to manage your Occupational Therapy exercises, medications, and day-to-day routines.</h3>
+        </>
       ) : (
-        <p>Your one-stop solution for managing therapy exercises and medications.</p>
+        <>
+          <h3>Sign in to begin managing your Occupational Therapy exercises, medications, and day-to-day routines.</h3>
+        </>
       )}
     </div>
   );
 }
-
