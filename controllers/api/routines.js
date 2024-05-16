@@ -11,7 +11,7 @@ module.exports = {
 // Get all routines
 async function getAllRoutines(req, res) {
   try {
-    const routines = await Routine.find();
+    const routines = await Routine.find({user: req.user._id});
     res.json(routines);
   } catch (err) {
     console.error(err);
@@ -36,7 +36,7 @@ async function getRoutineDetails(req, res) {
 
 // Create a new routine
 async function createRoutine(req, res) {
-    req.body.user = req.user._id;
+  req.body.user = req.user._id;
   try {
     const routine = new Routine(req.body);
     await routine.save();
