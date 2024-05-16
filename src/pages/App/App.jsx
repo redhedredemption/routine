@@ -8,7 +8,7 @@ import RoutinesPage from '../RoutinesPage/RoutinesPage';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import ExercisesPage from '../ExercisesPage/ExercisesPage';
-// import NewExercisePage from '../NewExercisePage/NewExercisePage';
+import NewExercisePage from '../NewExercisePage/NewExercisePage';
 // import MedicationsPage from '../MedicationsPage/MedicationsPage';
 // import NewMedicationPage from '../NewMedicationPage/NewMedicationPage';
 
@@ -21,12 +21,12 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/auth" element={<AuthPage setUser={setUser} />} />
-              {<Route path="/exercises" element={<ExercisesPage />} />
-              /*<Route path="/exercises/new" element={<NewExercisePage />} />
-              <Route path="/medications" element={<MedicationsPage />} />
+              {/* <Route path="/medications" element={<MedicationsPage />} />
               <Route path="/medications/new" element={<NewMedicationPage />} /> */}
               <Route path="/routines/new" element={<NewRoutinePage />} />
               <Route path="/routines" element={<RoutinesPage />} />
+              <Route path="/exercises" element={<ExercisesPage />} />
+              <Route path="/exercises/new" element={<NewExercisePage />} />
               <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
     </main>
