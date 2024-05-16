@@ -98,6 +98,7 @@ export default function RoutinesPage() {
           <button type="submit">Save Changes</button>
         </form>
       </Modal>
+      <img src="/images/routines.png" alt="home"/>
     </>
   );
 }

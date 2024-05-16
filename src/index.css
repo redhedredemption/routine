@@ -90,9 +90,21 @@ h1, h2, h3, p {
   color: var(--white);
 }
 
-h1, h2 {
+h1 {
   font-family: "Fraunces", serif;
   font-weight: bold;
+  font-size: 10vmin;
+  margin: 0
+}
+
+h2, h3 {
+  font-family: "Raleway", serif;
+  margin: 2vmin
+
+}
+
+h3 {
+  font-weight: 500
 }
 
 code {
@@ -262,7 +274,8 @@ button.btn-xs {
 }
 
 .add-button-container {
-  margin-bottom: 20px;
+  margin: 2vmin;
+  padding: 2vmin;
 }
 
 .add-button-label {

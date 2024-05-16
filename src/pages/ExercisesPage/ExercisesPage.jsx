@@ -94,6 +94,7 @@ export default function ExercisesPage() {
           <button type="submit">Save Changes</button>
         </form>
       </Modal>
+      <img src="/images/exercises.png" alt="home"/>
     </>
   );
 }

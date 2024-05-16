@@ -94,6 +94,7 @@ export default function MedicationsPage() {
           <button type="submit">Save Changes</button>
         </form>
       </Modal>
+      <img src="/images/medications.png" alt="home"/>
     </>
   );
 }
