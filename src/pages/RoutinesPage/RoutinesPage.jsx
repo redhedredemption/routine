@@ -97,26 +97,3 @@ export default function RoutinesPage() {
     </>
   );
 }
-
-
-
-//   return (
-//     <>
-//       <h1>Routines</h1>
-//       {routines.length ? (
-//         <ul className="routines-container">
-//           {routines.map(routine => (
-//             <li key={routine._id}>
-//               <h3>{routine.title}</h3>
-//               <p>{routine.description}</p>
-//               <button onClick={() => handleDelete(routine._id)}>Delete</button>
-//               <Link to={`/routines/edit/${routine._id}`} className="button">Edit</Link>
-//             </li>
-//           ))}
-//         </ul>
-//       ) : (
-//         <p>There are no routines available at the moment!</p>
-//       )}
-//     </>
-//   );
-// }
