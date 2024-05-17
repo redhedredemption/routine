@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import * as routinesAPI from "../../utilities/routines-api";
 import { Link } from "react-router-dom";
 import Modal  from '../../components/Modal/Modal';
@@ -58,14 +58,19 @@ export default function RoutinesPage() {
     <>
       <h1>Routines</h1>
       <div className="add-button-container">
-      <Link to="/routines/new" className="button">Add New Routine</Link>
+        <Link to="/routines/new" className="button">Add New Routine</Link>
       </div>
-      <div className="routines-container">
+      <div className="card-container">
         {routines.length ? (
           routines.map(routine => (
-            <div key={routine._id} className="routine-card">
+            <div key={routine._id} className="item-card">
               <h3>{routine.title}</h3>
-              <p>{routine.description}</p>
+              <p>{routine.description.split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</p>
               <div className="button-group">
                 <button onClick={() => handleDelete(routine._id)}>Delete</button>
                 <button onClick={() => openEditModal(routine)}>Edit</button>
@@ -73,7 +78,7 @@ export default function RoutinesPage() {
             </div>
           ))
         ) : (
-          <p>There are no routines available at the moment!</p>
+          <p className="no-routines">There are no routines available at the moment!</p>
         )}
       </div>
       <Modal isOpen={isEditing} onClose={closeEditModal}>

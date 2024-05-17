@@ -57,21 +57,25 @@ export default function ExercisesPage() {
   return (
     <>
       <h1>Exercises</h1>
+      <div className="add-button-container">
       <Link to="/exercises/new" className="button">Add New Exercise</Link>
-      {exercises.length ? (
-        <ul className="exercises-container">
-          {exercises.map(exercise => (
-            <li key={exercise._id}>
+      </div>
+      <div className="card-container">
+        {exercises.length ? (
+          exercises.map(exercise => (
+            <div key={exercise._id} className="item-card">
               <h3>{exercise.title}</h3>
               <p>{exercise.description}</p>
-              <button onClick={() => handleDelete(exercise._id)}>Delete</button>
-              <button onClick={() => openEditModal(exercise)}>Edit</button>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>There are no exercises available at the moment!</p>
-      )}
+              <div className="button-group">
+                <button onClick={() => handleDelete(exercise._id)}>Delete</button>
+                <button onClick={() => openEditModal(exercise)}>Edit</button>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p style={{ textAlign: 'center' }}>There are no exercises available at the moment!</p>
+        )}
+      </div>
       <Modal isOpen={isEditing} onClose={closeEditModal}>
         <form onSubmit={handleSubmitEdit}>
           <label htmlFor="title">Title</label>

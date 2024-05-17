@@ -93,7 +93,7 @@ h1, h2, h3, p {
 h1 {
   font-family: "Fraunces", serif;
   font-weight: bold;
-  font-size: 10vmin;
+  font-size: 5vmin;
   margin: 0
 }
 
@@ -239,13 +239,14 @@ button.btn-xs {
 }
 
 /* Card Styling */
-.routines-container {
+.card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
+  
 }
 
-.routine-card {
+.item-card {
   background-color: var(--green-3);
   border: 1px solid var(--green-2);
   border-radius: 10px;

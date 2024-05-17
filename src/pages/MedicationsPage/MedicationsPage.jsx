@@ -57,21 +57,25 @@ export default function MedicationsPage() {
   return (
     <>
       <h1>Medications</h1>
+      <div className="add-button-container">
       <Link to="/medications/new" className="button">Add New Medication</Link>
-      {medications.length ? (
-        <ul className="medications-container">
-          {medications.map(medication => (
-            <li key={medication._id}>
+      </div>
+      <div className="card-container">
+        {medications.length ? (
+          medications.map(medication => (
+            <div key={medication._id} className="item-card">
               <h3>{medication.title}</h3>
               <p>{medication.description}</p>
-              <button onClick={() => handleDelete(medication._id)}>Delete</button>
-              <button onClick={() => openEditModal(medication)}>Edit</button>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>There are no medications available at the moment!</p>
-      )}
+              <div className="button-group">
+                <button onClick={() => handleDelete(medication._id)}>Delete</button>
+                <button onClick={() => openEditModal(medication)}>Edit</button>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p style={{ textAlign: 'center' }}>There are no medications available at the moment!</p>
+        )}
+      </div>
       <Modal isOpen={isEditing} onClose={closeEditModal}>
         <form onSubmit={handleSubmitEdit}>
           <label htmlFor="title">Title</label>
