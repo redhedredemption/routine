@@ -2,11 +2,10 @@
 rOuTine is your one-stop Occupational Therapy helper. This application allows users to manage their Occupational Therapy exercises, medications, and day-to-day routines efficiently. Whether you're a patient or a therapist, rOuTine helps you keep track of essential tasks and activities to improve your therapy experience.
 
 ## Screenshots
-![Home Page ](.public/images/home_page.png)
+![Home Page ](https://github.com/redhedredemption/routine/blob/main/public/images/home_page.PNG?raw=true)
+![Medications Page ](https://github.com/redhedredemption/routine/blob/main/public/images/medications_page.PNG?raw=true)
+![Routines Page ](https://github.com/redhedredemption/routine/blob/main/public/images/routines_page.PNG?raw=true)
 
-![Medications] Page ](.public/images/medications_page.png)
-
-![Routines] Page ](.public/images/routines_page.png)
 
 ## Technologies Used
 - React.js
